@@ -1,0 +1,49 @@
+---
+import img1 from '../../assets/images/pic1.png'
+import img2 from '../../assets/images/pic2.png'
+import Links from './Links.astro'
+---
+
+<div class="bg-[url(https://api.cyrilstudio.top/bing/image.php)] w-screen h-screen bg-no-repeat bg-cover mt--19 flex items-center justify-center flex-col md:flex-row">
+  <div class="flex md:flex-col">
+    <img 
+      id="img1"
+      src={img1} 
+      alt=""
+      class="md:w-130 rounded-3 shadow-md mr-3 md:mb-5 w-45"
+    />
+    <img 
+      id="img2"
+      src={img2} 
+      alt=""
+      class="md:w-130 rounded-3 shadow-md w-45"
+    />
+  </div>
+  <div class="md:ml-20 font-bold text-10 c-white flex flex-col items-center md:items-start">
+    <div class="hidden md:block">
+      这是一个很好看的新标签页！<br>
+      她带来了一个好看的新标签页！<br>
+      她提供了一个带有部分小功能的新标签页！
+    </div>
+    <Links/>
+  </div>
+</div>
+
+<script>
+  import img1 from '../../assets/images/pic1.png'
+  import img2 from '../../assets/images/pic2.png'
+  import mImg1 from '../../assets/images/mobile/pic1.png'
+  import mImg2 from '../../assets/images/mobile/pic2.png'
+
+  const setImg = () => {
+    if (window.innerWidth < 768) {
+      (document.querySelector('#img1') as HTMLImageElement).src = mImg1;
+      (document.querySelector('#img2') as HTMLImageElement).src = mImg2;
+    } else {
+      (document.querySelector('#img1') as HTMLImageElement).src = img1;
+      (document.querySelector('#img2') as HTMLImageElement).src = img2;
+    }
+  }
+  setImg()
+  window.addEventListener('resize', setImg)
+</script>

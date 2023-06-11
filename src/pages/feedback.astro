@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import backgroundImg from '../assets/images/background.jpg'
+import qqImg from '../assets/images/qq.jpg'
+import coolapkImg from '../assets/images/coolapk.png'
+---
+
+<Layout title="uyou 新标签页">
+	<main 
+		style={{backgroundImage: `url(${backgroundImg})`}}
+		class="w-screen h-screen bg-no-repeat bg-cover mt--19 flex justify-center items-center overflow-scroll"
+	>
+		<div class="flex md:flex-row flex-col justify-center items-center flex-gap-5 select-none md:mt-0 mt-90 md:mb-0 mb-10">
+			<a 
+				href="https://jq.qq.com/?_wv=1027&k=7UYMfEzD"
+				target="_blank"
+				class="bg-white/50 backdrop-blur-md p-5 rounded-5 shadow-md"
+			>
+				<img 
+					src={qqImg} 
+					alt=""
+					class="md:h-170 md:w-auto w-70 rounded-3"
+				>
+			</a>
+			<a 
+				href="http://www.coolapk.com/u/1126752"
+				target="_blank"
+				class="bg-white/50 backdrop-blur-md p-5 rounded-5 shadow-md"
+			>
+				<img 
+					src={coolapkImg} 
+					alt=""
+					class="md:h-170 md:w-auto w-70 rounded-3"
+				>
+			</a>
+		</div>
+	</main>
+</Layout>
