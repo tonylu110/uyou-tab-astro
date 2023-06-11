@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="dark:bg-gray-700">
 		<TabBar/>
 		<slot />
 	</body>
@@ -26,6 +26,19 @@ const { title } = Astro.props;
 
 <style is:global>
 	::-webkit-scrollbar {
-		--uno: hidden;
+		display: none;
 	}
 </style>
+
+<script>
+	const changeTheme = () => {
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	}
+	changeTheme()
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeTheme)
+</script>

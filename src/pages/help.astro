@@ -10,14 +10,14 @@ import list from '../data/helps'
 		class="w-screen h-screen bg-no-repeat bg-cover mt--19 flex items-center overflow-scroll flex-col pt-25 flex-gap-5 pb-10"
 	>
 		{list.map(item => (
-			<div class="w-90vw flex bg-white/50 backdrop-blur-md p-5 rounded-5 flex-col md:flex-row md:w-60vw">
+			<div class="w-90vw flex bg-white/50 backdrop-blur-md p-5 rounded-5 flex-col md:flex-row md:w-60vw dark:bg-gray-700/50">
 				<img
 					src={item.img}
 					class="w-auto md:w-130 mr-0 mb-10 md:mb-0 md:mr-10 rounded-3"
 				/>
 				<div class="flex flex-col">
-					<span class="text-5 font-bold">{item.infoQ}</span>
-					<span class="text-5 font-bold">{item.infoA}</span>
+					<span class="text-5 font-bold dark:c-white">{item.infoQ}</span>
+					<span class="text-5 font-bold dark:c-white">{item.infoA}</span>
 				</div>	
 			</div>
 		))}

@@ -2,18 +2,18 @@
 import logoImg from '../../assets/images/extension.png'
 ---
 
-<header class="z-10 sticky top-2 m-2 w-[calc(100vw-1rem)] flex items-center justify-between h-15 p-2 shadow-md shadow-black/10 rounded-2 bg-white/50 backdrop-blur-md">
+<header class="z-10 sticky top-2 m-2 w-[calc(100vw-1rem)] flex items-center justify-between h-15 p-2 shadow-md shadow-black/10 rounded-2 bg-white/50 dark:bg-gray-700/50 backdrop-blur-md">
   <a href="/" class="flex items-center">
     <img 
       src={logoImg} 
       alt="" 
       class="h-11 shadow-md rounded-full mr-2"
     >
-    <span class="font-bold text-5 hidden md:inline">uyou 新标签页</span>
+    <span class="font-bold text-5 hidden md:inline dark:c-white">uyou 新标签页</span>
   </a>
   <div class="flex items-center mr-2">
-    <a href="/feedback" class="font-bold">反馈</a>
-    <a href="/donate" class="font-bold mx-5">捐赠</a>
-    <a href="/help" class="font-bold">帮助</a>
+    <a href="/feedback" class="font-bold dark:c-white">反馈</a>
+    <a href="/donate" class="font-bold dark:c-white mx-5">捐赠</a>
+    <a href="/help" class="font-bold dark:c-white">帮助</a>
   </div>
 </header>

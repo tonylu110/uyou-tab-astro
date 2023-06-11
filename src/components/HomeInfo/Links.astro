@@ -7,14 +7,14 @@ import list from '../../data/links'
     <a 
       href={item.url} 
       target="_blank"
-      class="h-15 md:h-20 w-45 md:w-70 bg-white/50 flex items-center p-2.5 md:p-5 rounded-35 backdrop-blur-md shadow-md hover:bg-white/70 cursor-pointer"
+      class="h-15 md:h-20 w-45 md:w-70 bg-white/50 dark:bg-gray-700/50 flex items-center p-2.5 md:p-5 rounded-35 backdrop-blur-md shadow-md hover:bg-white/70 dark:hover:bg-gray-700/70 cursor-pointer"
     >
       <img 
         src={item.icon} 
         alt=""
         class="h-10 mr-3 md:mr-5"
       >
-      <span class="text-4 c-black select-none">{item.title}</span>  
+      <span class="text-4 c-black select-none dark:c-white">{item.title}</span>  
     </a>
   ))}
 </div>
